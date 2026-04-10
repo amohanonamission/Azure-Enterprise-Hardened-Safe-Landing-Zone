@@ -7,7 +7,7 @@ param tags object
 resource kv 'Microsoft.KeyVault/vaults@2023-02-01' = {
   name: take('kv-${prefix}-${uniqueString(resourceGroup().id)}', 24)
   location: location
-  tags: tags
+  tags: tags 
   properties: {
     sku: { family: 'A', name: 'standard' }
     tenantId: subscription().tenantId
