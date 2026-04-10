@@ -43,9 +43,12 @@ Beyond the Bicep deployment, this lab includes documented manual configurations 
 
 ## Visual Documentation
 
-### Network Watcher Topology: 
+### Architecture Diagram (VS Code)
+ 
+![Architecture Diagram](images/vscode-networkdiagram.png)
 
-[Insert Screenshot showing Hub/Spoke connectivity]
+### Network Watcher Topology:
+
 
 ### Resource Lock Verification: 
 
