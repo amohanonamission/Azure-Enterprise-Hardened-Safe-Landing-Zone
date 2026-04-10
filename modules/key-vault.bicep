@@ -5,7 +5,7 @@ param subnetId string
 param tags object 
 
 resource kv 'Microsoft.KeyVault/vaults@2023-02-01' = {
-  name: 'kv-${prefix}-${uniqueString(resourceGroup().id)}'
+  name: take('kv-${prefix}-${uniqueString(resourceGroup().id)}', 24)
   location: location
   tags: tags
   properties: {
