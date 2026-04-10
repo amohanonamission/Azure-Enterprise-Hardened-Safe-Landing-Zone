@@ -47,15 +47,17 @@ Beyond the Bicep deployment, this lab includes documented manual configurations 
  
 ![Architecture Diagram](images/vscode-networkdiagram.png)
 
-![Architecture Diagram](images/Azure visualizer.png)
+![Architecture Diagram](images/Azure-Visualizer.png)
 
 ### Network Watcher Topology:
 
-![Architecture Diagram](images/vscode-netwo)
+![Architecture Diagram](images/Deployment-Proof-Azure.png)
+
+![Architecture Diagram](images/network-watcher.png)
 
 ### Resource Lock Verification: 
 
-[Insert Screenshot of the "Access Denied" error when trying to delete the VM]
+![Architecture Diagram](images/vm-resource-lock.png)
 
 ### Private Link Verification: 
 
