@@ -18,7 +18,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2023-03-01' = {
   tags: tags
   identity: { type: 'SystemAssigned' }
   properties: {
-    hardwareProfile: { vmSize: 'Standard_B1s' }
+    hardwareProfile: { vmSize: 'Standard_B2s' }
     storageProfile: {
       imageReference: { publisher: 'Canonical', offer: '0001-com-ubuntu-server-focal', sku: '20_04-lts-gen2', version: 'latest' }
       osDisk: { createOption: 'FromImage', managedDisk: { storageAccountType: 'Standard_LRS' } }
