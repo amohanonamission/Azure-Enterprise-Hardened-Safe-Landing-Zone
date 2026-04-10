@@ -47,7 +47,7 @@ Beyond the Bicep deployment, this lab includes documented manual configurations 
  
 ![Architecture Diagram](images/vscode-networkdiagram.png)
 
-![Architecture Diagram](images/Azure\visualizer.png)
+![Architecture Diagram](images/Azure visualizer.png)
 
 ### Network Watcher Topology:
 
