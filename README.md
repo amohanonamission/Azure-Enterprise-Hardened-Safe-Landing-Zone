@@ -61,5 +61,5 @@ Beyond the Bicep deployment, this lab includes documented manual configurations 
 
 ### Private Link Verification: 
 
-[Insert Screenshot showing Key Vault has 0 Public IP access]
+![Architecture Diagram](images/vault-private.png)
 
