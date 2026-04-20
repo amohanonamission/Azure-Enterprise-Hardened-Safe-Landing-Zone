@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "rgName": {
+      "value": "AMPT-prod-Enterprise-Security"
+    },
+    "location": {
+      "value": "centralindia"
+    },
+    "prefix": {
+      "value": "AMPT2026-Bicep"
+    },
+    "tags": {
+      "value": {
+        "Environment": "Production",
+        "Department": "Cloud-Ops",
+        "Service": "Hardened-Foundation",
+        "Project": "${prefix}-Project",
+        "DeployedBy": "Arnav-Mohan"
+      }
+    }
+  }
+}
