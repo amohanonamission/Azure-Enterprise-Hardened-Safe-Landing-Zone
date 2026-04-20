@@ -2,16 +2,10 @@
 
 targetScope = 'subscription' // This allows us to create the Resource Group
 
-param rgName string = 'AMPT-prod'
-param location string = 'centralindia'
-param prefix string = 'AMPT2026-Bicep'
-param tags object = {
-    Environment: 'Production'
-    Department: 'Cloud-Ops'
-    Service: 'Hardened-Foundation'
-    Project: '${prefix}-Project'
-    DeployedBy: 'Arnav-Mohan'
-} // These parameters must match the param in modules
+param rgName string 
+param location string 
+param prefix string 
+param tags object  // Parameters provided by parameters.json, ensuring consistency and ease of updates
 
 resource rg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   name: '${rgName}-Enterprise-Security'
