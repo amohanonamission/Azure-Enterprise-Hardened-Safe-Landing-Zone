@@ -38,10 +38,12 @@ This project serves as a comprehensive SecOps lab for demonstrating Identity-bas
 ```bash
 
 az login
-az deployment sub create \
+az stack sub create \
+  --name "AMPT-2026-Foundation-Stack" \
   --location centralindia \
   --template-file main.bicep \
-  --parameters parameters.json
+  --parameters parameters.json \
+  --deny-settings-mode "denyDelete" # This prevents manual deletion in portal!
   
 * input the username and password when prompted
 ```
