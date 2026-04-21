@@ -23,6 +23,14 @@ This project serves as a comprehensive SecOps lab for demonstrating Identity-bas
 |vault.bicep	| Secret Management	| Private Endpoint (No Public Access) & RBAC Authorization. |
 |compute-hardened.bicep	| Workload Protection	| System Identity, No Public IP, and CanNotDelete Resource Locks. |
 
+### Security Architecture Decisions
+
+* **Decision 1:** Secure Parameterization. "Used @secure() decorators for all administrative credentials to ensure zero exposure in deployment logs and metadata."
+
+* **Decision 2:** Automated Hardening. "Leveraged the CustomScript extension to enforce an immediate password change policy (chage -d 0) upon the first interactive login, mitigating 'Day 1' credential risks."
+
+* **Decision 3:** Observability-by-Design. "Every compute resource is deployed with a pre-configured diagnostic pipe to a centralized Log Analytics Workspace for immediate SIEM ingestion."
+
 ### How to Deploy:
 
 ```bash
@@ -32,7 +40,8 @@ az deployment sub create \
   --location centralindia \
   --template-file main.bicep \
   --parameters parameters.json
-
+  
+* input the username and password when prompted
 ```
 
 ## SecOps: Day 2 Operational Configurations
