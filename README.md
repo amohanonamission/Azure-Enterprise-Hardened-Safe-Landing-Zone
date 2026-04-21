@@ -26,10 +26,12 @@ This project serves as a comprehensive SecOps lab for demonstrating Identity-bas
 ### How to Deploy:
 
 ```bash
+
 az login
 az deployment sub create \
   --location centralindia \
-  --template-file main.bicep
+  --template-file main.bicep \
+  --parameters parameters.json
 
 ```
 
