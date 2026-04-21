@@ -38,6 +38,7 @@ This project serves as a comprehensive SecOps lab for demonstrating Identity-bas
 ```bash
 
 az login
+
 az stack sub create \
   --name "AMPT-2026-Foundation-Stack" \
   --location centralindia \
