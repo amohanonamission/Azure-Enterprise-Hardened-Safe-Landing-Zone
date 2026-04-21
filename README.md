@@ -31,6 +31,8 @@ This project serves as a comprehensive SecOps lab for demonstrating Identity-bas
 
 * **Decision 3:** Observability-by-Design. "Every compute resource is deployed with a pre-configured diagnostic pipe to a centralized Log Analytics Workspace for immediate SIEM ingestion."
 
+* **Decision 4:** Private Link Integration. "Bypassed the public internet entirely for Key Vault access by implementing Azure Private Link. This ensures that even if an attacker had valid credentials, the vault remains physically unreachable from outside the private VNet mesh.
+
 ### How to Deploy:
 
 ```bash
@@ -44,13 +46,20 @@ az deployment sub create \
 * input the username and password when prompted
 ```
 
-## SecOps: Day 2 Operational Configurations
+## SecOps: Day 2 Operational & Governance Configurations
 Beyond the Bicep deployment, this lab includes documented manual configurations for:
 
 * **Microsoft Defender for Cloud:** Enabling security posture management (CSPM).
 * **Just-In-Time (JIT) Access:** Restricting management ports via adaptive network hardening.
 * **Azure Policy:** Assigning the "Azure Security Benchmark" for continuous compliance auditing.
 * **Disk Encryption:** Implementing Azure Disk Encryption (ADE) via the Hardened Key Vault.
+
+Unlike traditional deployments, this lab focuses on Operational Sustainability using the following "Modern SecOps" pillars:
+
+* **Encryption at Host (The ADE Successor):** Moving beyond legacy ADE, this architecture utilizes Encryption at Host to ensure that temporary disks, OS caches, and data disks are encrypted at the source with zero performance impact.
+* **Microsoft Defender for Cloud (CSPM):** Automated onboarding to the Defender for Cloud portal to monitor the "Security Score" and remediate high-risk findings (like open management ports).
+* **Adaptive Network Hardening (JIT):** Documentation for implementing Just-In-Time (JIT) access. This ensures that Port 22/3389 are "Closed by Default" and only opened via a time-limited, RBAC-approved request.
+* **Policy-as-Code (Azure Security Benchmark):** Integrated guidance on assigning the ASB (v4) initiative to the Resource Group. This ensures any resource that drifts from the security baseline is flagged as "Non-Compliant" automatically.
 
 ## Visual Documentation
 
@@ -66,11 +75,19 @@ Beyond the Bicep deployment, this lab includes documented manual configurations 
 
 ![Architecture Diagram](images/network-watcher.png)
 
-### Resource Lock Verification: 
+### Resource Lock Verification (Lock Test): 
 
 ![Architecture Diagram](images/vm-resource-lock.png)
 
 ### Private Link Verification: 
 
 ![Architecture Diagram](images/vault-private.png)
+
+### Key Vault (Managed Identity)
+
+
+### NSG Flow 
+
+
+### Azure Monitor
 
