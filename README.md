@@ -44,7 +44,7 @@ az stack sub create \
   --location centralindia \
   --template-file main.bicep \
   --parameters parameters.json \
-  --deny-settings-mode "denyDelete" # This prevents manual deletion in portal!
+  --deny-settings-mode "denyDelete"     # This prevents manual deletion in portal!
   
 * input the username and password when prompted
 ```
