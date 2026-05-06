@@ -33,6 +33,39 @@ This project serves as a comprehensive SecOps lab for demonstrating Identity-bas
 
 * **Decision 4:** Private Link Integration. "Bypassed the public internet entirely for Key Vault access by implementing Azure Private Link. This ensures that even if an attacker had valid credentials, the vault remains physically unreachable from outside the private VNet mesh.
 
+### Repository Structure
+
+```
+Repo: Azure-Enterprise-Hardened-Secure-Landing-Zone/
+├── .github/
+│   └── workflows/
+│       └── bicep-deploy.yml          	# UPDATED: Now includes linting and What-If analysis
+├── docs/                          	       		# NEW: The "Audit Evidence" & Architecture
+│   ├── threat-model.md              		# Threat Model & Firewall vs NSG logic
+│   └── architecture-diagram.png  
+├── modules/
+│   ├── network/
+│   │   ├── hub-vnet.bicep
+│   │   ├── spoke-vnet.bicep
+│   │   ├── peering.bicep         		# NEW: Dedicated peering module
+│   │   ├── firewall.bicep         		# Includes Diagnostic Settings
+│   │   └── nsg.bicep             		# Includes Diagnostic Settings
+│   ├── governance/
+│   │   └── policies.bicep
+│   ├── security/
+│   │   ├── keyvault.bicep        		# Includes Diagnostic Settings
+│   │   └── law.bicep             
+├── identity/                                                  # NEW: Identity Management
+│   └── setup-break-glass.ps1                      # Script & instructions for BCP emergency access
+├── monitoring/                                             # NEW: Sentinel & Threat Hunting
+│   └── Threat-Detection-Queries.kql           # KQL rules for NSG/Key Vault tampering
+├── bicepconfig.json              	            # NEW: Linter rules & registry config
+├── main.bicep                    
+├── main.parameters.json          
+└── README.md                                         # The "Audit Evidence" documentation
+```
+
+
 ### How to Deploy:
 
 ```bash
