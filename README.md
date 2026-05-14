@@ -110,7 +110,7 @@ Unlike traditional deployments, this lab focuses on Operational Sustainability u
 ### Network Watcher Topology:
 
 ![Architecture Diagram](images/Deployment-Proof-Azure.png)
-
+* (IMG003- Diagram shows the Azure Resource Group overview.)
 ![Architecture Diagram](images/network-watcher.png)
 
 ### Resource Lock Verification (Lock Test): 
