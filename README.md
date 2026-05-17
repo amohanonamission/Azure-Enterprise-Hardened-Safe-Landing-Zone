@@ -117,6 +117,7 @@ Unlike traditional deployments, this lab focuses on Operational Sustainability u
 ### Resource Lock Verification (Lock Test): 
 
 ![Architecture Diagram](images/vm-resource-lock.png)
+* (IMG005- Diagram shows the Network Security group Inbound and Outbound rules.)
 
 ### Private Link Verification: 
 
