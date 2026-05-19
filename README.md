@@ -122,7 +122,7 @@ Unlike traditional deployments, this lab focuses on Operational Sustainability u
 ### Private Link Verification: 
 
 ![Architecture Diagram](images/vault-private.png)
-* (IMG006- Diagram shows the Deletion Attempt on the Resource Group with Resource Lock.)
+* **(IMG006- Diagram shows the Deletion Attempt on the Resource Group with Resource Lock.)**
 
 ### Key Vault (Managed Identity)
 
